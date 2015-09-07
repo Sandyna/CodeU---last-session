@@ -15,10 +15,38 @@ Thoughts on the problem:
     where the internal 11 is. We can see there that 11 is a palindrome, therefore our new number is also a palindrome. 
   This is probably not the best solution. 
 How to improve:
+If I have binary representation of a number, I should be able to say how many palindromes there were before. 
 Questions for myself: 
 Can we tell, if given a palindrome, at which position it stands (what was the initial K?)? Can we somehow find out the 
 minimal amount of palindromes so far? 
 Test cases:
+1=1
+2=10
+3=11
+4=100
+5=101
+6=110
+7=111
+8=1000
+9=1001
+10=1010
+11=1011
+12=1100
+13=1101
+14=1110
+15=1111
 K(3)=5
-K(7)=
+K(6)=15
 Code:
+public int palindrome(int k){
+int counter = 0, kthInteger=0;
+  while(counter!=k){
+    if(isPalindrome(kthInteger)){
+      counter++;
+    }
+    kthInteger++;
+  }
+}
+public boolean isPalindrome (int input) {
+  //checks whether it is a palindrome in binary
+}
