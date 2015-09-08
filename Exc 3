@@ -1,0 +1,11 @@
+Exercise 3
+Questions:
+Does it mean that ugly number can't have any other prime factors than 2, 3 and 5? Is 14 not an ugly number?
+Thoughts on the problem: 
+2, 3, 2*2, 5, 2*3, 2*2*2, 3*3, 2*5, 2*2*3, 2*2*2*2, 2*3*3, 3*3*3
+How to improve:
+Questions for myself: 
+
+Test cases:
+
+Code:
