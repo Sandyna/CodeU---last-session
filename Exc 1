@@ -15,7 +15,8 @@ Thoughts on the problem:
     where the internal 11 is. We can see there that 11 is a palindrome, therefore our new number is also a palindrome. 
   This is probably not the best solution. 
 How to improve:
-If I have binary representation of a number, I should be able to say how many palindromes there were before. 
+If I have binary representation of a number, I should be able to say how many palindromes there were before. Using math.
+(How many palindromic combinations are there for 1, 2, ..., n bits long number?)
 Questions for myself: 
 Can we tell, if given a palindrome, at which position it stands (what was the initial K?)? Can we somehow find out the 
 minimal amount of palindromes so far? 
