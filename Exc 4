@@ -12,8 +12,22 @@ makeChange(10 , {2, 3, 5}) = 4
 Code:
 static int counter=0;
 
-public void recursion (int [] numbersOfCoins){
-  
+public void recursion (int [] numbersOfCoins, int[] m, int n){
+  valueOfCoins = 0;
+  for(int i=0; i<m.length; i++){
+    valueOfCoins += m[i]*numberOfCoins[i];
+  }
+  if(valueOfCoins>n){
+    return;
+  }
+  if(valueOfCoins==n){
+    counter++;
+    return;
+  }
+  if(valueOfCoins<n){
+    
+    recursion ();
+  }
 }
 
 public int makeChange(Integer n, int[] m){
@@ -22,6 +36,6 @@ public int makeChange(Integer n, int[] m){
   //exatly the desired - counter ++
   int [] numberOfCoinsInput = new int[m.length];
   Arrays.fill(numberOfCoinsInput, 0);
-  recursion(numberOfCoinsInput);
+  recursion(numberOfCoinsInput, m, n);
   return counter;
 }
