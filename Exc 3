@@ -4,8 +4,10 @@ Does it mean that ugly number can't have any other prime factors than 2, 3 and 5
 Thoughts on the problem: 
 We need to find a way, how to produce ugly numbers in order (depending on how big they are). Perhaps we could try finding a
 pattern. Or we need to find a way how to tell wheter a number is ugly or not and how many ugly numbers are lesser than it.
+We can generate ugly numbers by multiplying 2, 3 and 5 amnog themselves. The only remaining question is, in which order. 
+| 5 -> 2*3 | 3*3 -> 2*5 | 3 -> 2*2 | 2*2*2 -> 3*3 | 2*2 ->5 | 2 -> 3 |     3*3*3 -> ???
 First obvious approach would consist of calculating 
-2, 3, 2*2, 5, 2*3, 2*2*2, 3*3, 2*5, 2*2*3, 2*2*2*2, 2*3*3, 3*3*3
+2, 3, 2*2, 5, 2*3, 2*2*2, 3*3, 2*5, 2*2*3, 3*5, 2*2*2*2, 2*3*3, 3*3*3
 How to improve:
 Questions for myself: 
 
