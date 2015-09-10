@@ -1,0 +1,27 @@
+Exercise 4
+Questions: 
+Can I take 0 of everything? Can M be 0? Is M sorted?
+Thoughts on the problem: 
+Will sorted help? 
+How to improve:
+Questions for myself: 
+Test cases:
+makeChange(0, {2, 4, 5, 7}) = 1
+makeChange(353, {}) = 0
+makeChange(10 , {2, 3, 5}) = 4
+Code:
+static int counter=0;
+
+public void recursion (int [] numbersOfCoins){
+  
+}
+
+public int makeChange(Integer n, int[] m){
+  //less than desired
+  //more than desired - stop
+  //exatly the desired - counter ++
+  int [] numberOfCoinsInput = new int[m.length];
+  Arrays.fill(numberOfCoinsInput, 0);
+  recursion(numberOfCoinsInput);
+  return counter;
+}
