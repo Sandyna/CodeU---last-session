@@ -27,4 +27,8 @@ Test cases:
   "447123454321" = 3, 9
   "abebabaeva" = 0, 5
 Code:
-
+int maxLength=0;
+String input;
+for(int i=0; i<input; i++){
+  
+}
