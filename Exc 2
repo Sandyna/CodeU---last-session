@@ -26,24 +26,37 @@ Test cases:
   "55555" = 0, 5
   "447123454321" = 3, 9
   "abebabaeva" = 0, 5
+  "111254111" = 0, 3
+  "125411" = 4, 2
 Code:
-int maxLength=0;
-String input;
-for(int i=0; i<input-1; i++){
+int maxLength=0, beginning=0;
+String input = "125411";
+for(int i=0; i<input.length(); i++){
   //for odd-length subsequences
   int j=0;
-  while (i-j>=0 && i+j <input && i-j == i+j){
-    j++;
+  while ((i-j>=0) && (i+j <input.length())) {
+    if ((input.charAt(i - j) == input.charAt(i + j))) {
+      j++;
+    } else {
+      break;
+    }
   }
-  if(j>maxLength){
-    maxLength=j;
+  if((j*2)-1>maxLength){
+    maxLength=(j*2)-1;
+    beginning=i-j+1;
   }
   //for cases of even length
   j=0;
-  while (i-j>=0 && i+j+1 <input && i-j == i+j+1){
-    j++;
+  while ((i-j>=0) && ((i+j+1)<input.length()) && ((i+j+1)>=0)){
+    if(input.charAt(i-j) == input.charAt(i+j+1)) {
+      j++;
+    } else {
+      break;
+    }
   }
-  if(j>maxLength){
-    maxLength=j;
+  if((j*2)>maxLength){
+    maxLength=(j*2);
+    beginning=i-j+1;
   }
 }
+System.out.println(beginning + ", " + maxLength);
