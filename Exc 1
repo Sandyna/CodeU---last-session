@@ -6,6 +6,11 @@ Thoughts on the problem:
   First obvious approach will be going through all odd numbers, keeping a counter of how many palindromes I have already seen.
   For each n, where n is an odd number, we know that there has been maximum of n/2 palindromes so far. Can we somehow find out
   the minimum of palindromes so far? Can we tell, if given a palindrome, at which position it stands (what was the initial K?)?
+This is what I'm going to do:
+If I have binary representation of a number, I should be able to say how many palindromes there were before. (Using math)
+(How many palindromic combinations are there for 1, 2, ..., n bits long number?) We can then use a binary search to find 
+the Kth number whose binary representation is a palindrome.
+How to improve:
   If we are keeping the leading zeroes, and are planning on using the function repeatedly, we can keep a table of numbers and
   the information about them being palindromes. If we then get a new number, we just compare the marginal bits - if they are the 
   same, we will look up the number in between of them and see whether it is a palindrome. The number is smaller, therefore we 
@@ -13,10 +18,9 @@ Thoughts on the problem:
     For example we have table containing numbers and whether they are palindromes: 1 {1}, 10 {0}, 11 {1}, 100 {0}, 101 {1}
     Now we get a new number: 1111. We can see the marginal bits are the same. Then we will look into our table at position 
     where the internal 11 is. We can see there that 11 is a palindrome, therefore our new number is also a palindrome. 
-  This is probably not the best solution. 
-How to improve:
-If I have binary representation of a number, I should be able to say how many palindromes there were before. Using math.
-(How many palindromic combinations are there for 1, 2, ..., n bits long number?)
+  This is an improovement to what I'm going to do:
+  If we are using the function repeatedy, we can keep a table of how many palindromic combinations are there for various 
+  lenghts of binary representations. 
 Questions for myself: 
 Can we tell, if given a palindrome, at which position it stands (what was the initial K?)? Can we somehow find out the 
 minimal amount of palindromes so far? 
