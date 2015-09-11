@@ -52,8 +52,14 @@ public int palindrome(int k){
     //add number of Ways for current Length to number of Ways in general
     if(currentLength%2==0){
       //since marginal bit are always 1, it's -2
+      if(numberOfWays+2^((currentLength-2)/2)>=k){
+        break;
+      }
       numberOfWays += 2^((currentLength-2)/2);
     } else {
+      if(numberOfWays+2^((currentLength-1)/2)>=k){
+        break;
+      }
       numberOfWays += 2^((currentLength-1)/2);
     }
   }
