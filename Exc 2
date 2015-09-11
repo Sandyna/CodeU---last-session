@@ -7,17 +7,19 @@ Thoughts on the problem:
   We could use a recursive function to cut a number from one or the other end of original sequence, leaving a sequence shorter
   by one character. We will first cut from the right part of the sequence, to ensure we will have the first palindrome 
   possible. The first palindrome we find is the right one. 
-    This goes through all possible subsequences. It will take O(2^n) (See if really??!!) This is not the optimal solution. 
+    This goes through all possible subsequences. It will take O(2^n) (See if really? Not if I do it in a clever way. But I
+    won't, because it's messy and I have a more elegant solution.)
+    This is not the optimal solution. 
   Another approach: We know our palindrome has a middle somewhere. Depending on its length, it can be one character, or it 
   can be two characters (or no character). We can start from the middle of our string and select characters to see, if they
   could be the middle one (all around them have to be mirrored). We have to go through all the characters and keep track of 
   the maximal length. 
-    Problem could be cases like this: 111111111111183113331. This approach takes O (n^2). 
+    This approach takes O (n^2). 
   
 How to improve:
-  KMP?
+  There are ways to improve this approach but are too complicated or too messy. 
 Questions for myself: 
-  Could KMP help us? 
+  Could KMP help us? No, probably not. 
 Test cases:
   "111111111111183113331" = 0, 13
   "" = 0, 0
@@ -26,4 +28,3 @@ Test cases:
   "abebabaeva" = 0, 5
 Code:
 
-  
