@@ -5,9 +5,10 @@ Thoughts on the problem:
 We need to find a way, how to produce ugly numbers in order (depending on how big they are). Perhaps we could try finding a
 pattern. Or we need to find a way how to tell wheter a number is ugly or not and how many ugly numbers are lesser than it.
 We can generate ugly numbers by multiplying 2, 3 and 5 amnog themselves. The only remaining question is, in which order. 
-| 5 -> 2*3 | 3*3 -> 2*5 | 3 -> 2*2 | 2*2*2 -> 3*3 | 2*2 ->5 | 2 -> 3 |     3*3*3 -> ???
-First obvious approach would consist of calculating 
-2, 3, 2*2, 5, 2*3, 2*2*2, 3*3, 2*5, 2*2*3, 3*5, 2*2*2*2, 2*3*3, 3*3*3
+It seems there is no pattern. 
+It might be better to approach it from the other side - I can tell about a number whether it is ugly or not, by dividing it
+by 5, 3, and 2. I can go through numbers up to 2^k (there might be a better estimate, but I currently don't know what it is) 
+and see which ones of them are ugly. 
 How to improve:
 Questions for myself: 
 
