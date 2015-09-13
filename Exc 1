@@ -64,6 +64,6 @@ public int palindrome(int k){
     }
   }
   //currentLength is now the length of binary representation of Kth number
-  
+  //(k-numberOfWays)
 }
 
